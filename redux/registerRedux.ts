@@ -12,13 +12,11 @@ const userSlice = createSlice({
             state.isFetching = true;
         },
         registerSuccess: (state, action) => {
-            console.log(action);
             state.isFetching = false;
             state.currentUser = action.payload;
             state.error = false;
         },
         registerFailure: (state) => {
-            console.log(state.error);
             state.isFetching = false;
             state.error = true;
         },

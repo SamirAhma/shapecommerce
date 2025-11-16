@@ -15,7 +15,6 @@ const Navbar = () => {
     const user = useSelector((state: RootState) => state.user.currentUser);
     const dispatch = useDispatch();
     const router = useRouter(); // Initialize the hook
-    console.log(user);
     const handleLogout = () => {
         dispatch(logout());
         // Use router.push() instead of navigate()
@@ -58,7 +57,7 @@ const Navbar = () => {
 
                 {/* Equivalent to: <Right> (flex: 1; display: flex; align-items: center; justify-content: flex-end; mobile: flex: 2, justify-content: center) */}
                 <div className="flex-1 flex items-center  sm:flex-1 sm:justify-end justify-center">
-                    {user?._id === null ? (
+                    {user === null ? (
                         <>
                             <Link className="linkNavbar" href="/register">
                                 {/* Equivalent to: <MenuItem> (font-size: 14px; cursor: pointer; margin-left: 25px; mobile: 12px, 10px) */}

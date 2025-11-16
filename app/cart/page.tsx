@@ -23,7 +23,7 @@ const Cart = () => {
     const onToken = (token: Token) => {
         setStripeToken(token);
     };
-    console.log(cart);
+
     // Console log removed for cleaner production code, but left for context if needed:
     // console.log(stripeToken);
 
@@ -36,7 +36,6 @@ const Cart = () => {
                 });
 
                 // Convert complex objects to JSON strings for URL safety
-                console.log(res);
 
                 // // Navigate using router.push, placing data in the query string
                 // router.push({ pathname: "/success",

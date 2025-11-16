@@ -58,7 +58,7 @@ export const login = async (
         // else block is empty, no action taken if type is neither 'login' nor 'register'
     } catch (err) {
         // 3. Dispatch failure action (sets isFetching = false, error = true)
-        console.log(err);
+
         dispatch(loginFailure());
     }
 };

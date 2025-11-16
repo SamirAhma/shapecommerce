@@ -43,7 +43,6 @@ const userSlice = createSlice({
         },
 
         loginFailure: (state: UserState) => {
-            console.log(state.error); // Note: This logs the *current* state.error, which may be false
             state.isFetching = false;
             state.error = true;
         },

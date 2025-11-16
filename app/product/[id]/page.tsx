@@ -54,7 +54,7 @@ function Product({ params }: Props) {
                 const res = await publicRequest.get<ProductData>(
                     "/products/find/" + id,
                 );
-                console.log(res.data);
+
                 setProduct(res.data);
 
                 // Initialize color/size with the first available option if product is fetched

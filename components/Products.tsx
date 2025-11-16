@@ -51,7 +51,6 @@ const Products: React.FC<ProductsProps> = ({ cat, filters = {}, sort }) => {
                     id: p._id,
                 }));
                 setProducts(productsWithId);
-                console.log(productsWithId);
             } catch (err) {
                 // console.error(err); // Good practice to log errors
             }

@@ -54,7 +54,7 @@ const Success = () => {
         const createOrder = async () => {
             // Ensure we have a user, Stripe data (which contains payment confirmation), and cart items
             if (!currentUser || !stripeData || !cart || !cart.products) return;
-            console.log(currentUser, stripeData, cart);
+
             try {
                 const res = await userRequest.post("/orders", {
                     userId: currentUser._id,
